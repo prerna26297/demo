@@ -1,0 +1,228 @@
+
+Software Requirements Specification
+for
+Online Voting Portal
+Version 1.0 approved
+Prepared by
+Tarasha Agarwal, 01
+Prerna Baliga, 05
+Nilesh Bhatia, 07
+Priyanka Gandhi, 17
+     Vivekanand Education Society’s Institute of Technology, Chembur
+                                                                                                 Jan 23, 2018 
+ 
+ 
+ 
+Table of Contents?
+Table of Contents ii
+Revision History ii
+1. Introduction 1
+1.1 Purpose 
+1.2 Document Conventions 
+1.3 Intended Audience and Reading Suggestions 
+1.4 Product Scope 
+1.5 References 
+2. Overall Description 2
+2.1 Product Perspective 
+2.2 Product Functions 
+2.3 User Classes and Characteristics 2
+2.4 Operating Environment 
+2.5 Design and Implementation Constraints 
+2.6 User Documentation 
+2.7 Assumptions and Dependencies 
+3. External Interface Requirements 5
+3.1 User Interfaces 
+3.2 Hardware Interfaces 
+3.3 Software Interfaces 
+3.4 Communications Interfaces 
+4. System Features 6
+4.1 System Feature 
+4.2 System Feature 2 
+5. Other Nonfunctional Requirements 7
+5.1 Performance Requirements 
+5.2 Safety Requirements 
+5.3 Security Requirements 
+5.4 Software Quality Attributes 
+5.5 Business Rules 
+6. Other Requirements 9
+Appendix A: Glossary 9
+Appendix B: Analysis Models 9
+Appendix C: To Be Determined List 9?
+
+1. INTRODUCTION
+1.1 PURPOSE
+The purpose of this document is to give a detailed description of the requirements for the Online Voting Portal software. It will illustrate the purpose and complete declaration for the development of system. It will also explain system constraints, interface and interactions with other external applications. This document is primarily intended to be proposed to a customer for its approval and a reference for developing the first version of the system for the development team.
+Online Voting Portal makes it possible for a voter to vote from anywhere in the country through verified network and credentials which are entered by the voter. So the voter living in remote/distant areas from voting booths may vote through this web application.
+1.2 DOCUMENT CONVENTIONS
+The document is in standard IEEE SRS format for ease of reading for the clients, developers, owners and all people associated with the development of the project.
+Bold attributes is to indicate main topics of this document.
+Italic attribute is to indicate references taken to prepare this document.
+1.3 INTENDED AUDIENCE AND READING SUGGESTIONS
+
+The document is intended for developers, project managers, marketing staff, users, testers, and documentation writers. The remainder of this document  provides an overview of the system functionality and system interaction with other systems. It also introduces different types of stakeholders and their interaction with the system. It also mentions the system constraints and assumptions about the product. It provides the requirements specification in detailed terms and a description of the different system interfaces. Different specification techniques are used in order to specify the requirements more precisely for different audiences. 
+
+1.4 PROJECT  SCOPE
+Online Voting portal is a system where people who have citizenship of India and whose age is above 18 years and of any sex can give his or her vote online without going to any physical polling station.The system administrator registers the voters on a special module of the system which is only accessible to him.Citizens seeking registration are required to contact the system administrator to submit their details.After validation of details by comparing them with those of existing databases,the citizen is registered as a voter.After registration ,the voter is assigned a voter id with which he and she can use to login into the system and vote.If invalid or wrong details are submitted then the citizen is not registered to vote. 
+This software is a web-based application and can be hosted on the Internet. It also provides a clean and user-friendly interface to the users.
+1.5 REFERENCES 
+The idea of the web portal has been referenced from the website forums https://forum.xda-developers.com/.
+The concept of voting was taken from forums of technology wherein community using that particular device suggest the changes that need to be enhance the user experience.
+The mechanism for voting has been referred from Comparative study of Instagram.com, who recently released a feature they proudly call it as polls.
+
+2. OVERALL DESCRIPTION  
+
+This section will give an overview of the whole system. The system will be explained in its context to show how the system interacts with other systems and introduce the basic functionality of it. It will also describe what type of stakeholders that will use the system and what functionality is available for each type. At last, the constraints and assumptions for the system will be presented. 
+2.1 Product Perspective 
+
+The Online Voting Portal is a publicly-available web portal that pulls together information on parties and their candidates. The problem when it comes to voting include ridging voters during election, insecure or inaccessible polling stations, inadequate polling materials and also inexperienced personnel. The online voting system seeks to  address the above issues. With this system in place, the users, citizens in this case shall be given ample time during the voting period.   
+
+2.2 Product Functions 
+Online Election System would have voter registration, verification, auto-generated User ID and password for voters. Admin Login which will be handled by Election Commission.  Voters will get Unique ID and Password, using which they can vote for a Candidate only once per Election. The project is beneficial for Election Commission. Voters as the can get to know the candidate background and choose wisely. The admin can remove faulty accounts. The software system allows Voters to view a list of Candidates in their area. The admin has overall rights over the system and can moderate and delete any details not pertaining to Election Rules.
+
+2.3 User classes and characteristics 
+
+User Class
+Priority
+Admin/Developer - Elections Commission
+Very High - Along with backdoors
+Verified Voters 
+One Time Voting, then Viewing Access.
+Parties, Journalists, etc.
+Viewing Access.
+2.4 Operating environment
+
+The web portal can work on any operating system irrespective of its version. 
+The application must be linked up to a server[when online] loaded with the Database. The users will require for mobile phone device and internet services such as WiFi or at least 3G mobile data network better working of the product.
+It should be compatible with all the well known and widely used operating systems like Android, IOS and Windows provided it supports web browsing.
+The system can also be used when not connected to the Internet. But there may be limitations.
+
+2.5 Design and Implementation Constraints
+
+The Internet connection is a constraint for the web portal. Since the web portal fetches data from the database over the Internet, it is crucial that there is an Internet connection for the portal to function.
+Images, Passwords, Aadhar Data, etc all data must be highly encrypted in DBMS as well as network devices for security purposes. When the system crashes it will return back to the last safe state and a detailed report may be sent to the developer. The system shall run on every Operating System which supports web browsing.
+
+2.6 Assumptions and dependencies
+
+User interface and some functionalities can change during the development process of project. And also new functionalities can be added which is able to change the dependent system requirements.
+One assumption about the web application product is that it will always be used on operating system that supports browsing and has enough performance. If the PC does not have enough hardware resources available for the portal, for example the users might have allocated them with other applications, there may be scenarios where the portal does not work as intended or even at all. 
+
+3. EXTERNAL INTERFACE REQUIREMENTS
+This section provides a detailed description of all inputs into and outputs from the system. It also gives a description of the hardware, software and communication interfaces and provides basic prototypes of the user interface.
+ 
+3.1 User Interfaces
+A first-time user of the portal must enter the valid credentials in order to proceed for voting online on the portal. If the user has not registered, he/she must get verified and validated from the admin by present his/her Aadhar UID card number. Once registered, the user gets assigned a 4 digit PIN/Password which may be changed at the voter’s will. Every Party candidate will have a brief description about their motto. After all the users are done voting or the time allotted for voting is exceeded, results will be declared on the home page. 
+3.2 Hardware Interfaces
+Since the web portal has designated hardware, it does not have any direct hardware interfaces.
+3.3 Software Interfaces
+The system is on server so it requires scripting language like PHP, HTML etc.The system require Database like MySQL to validate voter’s UID number and securely store the votes given to the designated party. At the last user need web browser to interact with the system.
+3.4 Communications Interfaces
+The portal will have a network server that is web-based and created using the PHP (Hypertext Processing) language. The server exists to retrieve information from the database and provide it to user. The product also calls for a database system that stores user information and the count of votes to each candidate. The  web portal will communicate with the database.The web portal will also add and modify data. All of the database communication will go over the Internet.
+4. SYSTEM FEATURES
+
+ID: SF1
+TITLE: Site Login Module
+DES:It includes a voters login and an administrator one. The voters and administrator log on then jump to the voting or admin page requested. 
+
+ID: SF2
+TITLE: Voters Module
+DES:It includes a voters module where the voters can cast their vote to any of the listed party candidates.
+
+ID: SF3
+TITLE: Admin Module
+DES:It includes a page which allows the admin to add/update users, see the updates in count of votes and generate final result.
+
+5. OTHER NONFUNCTIONAL REQUIREMENTS
+5.1 Performance Requirements
+5.1.1    Performance Requirement 1
+ID: PR1
+TAG: Response Time
+GIST: The fastness of the search
+SCALE: The response time of a search
+METER: Measurements obtained from 1000 searches during testing.
+MUST: No more than 2 seconds 100% of the time.
+WISH: No more than 1 second 100% of the time.
+
+5.2 Safety Requirements
+The web portal should be guarded from hackers. The required safety certifications that must be satisfied.
+5.3 Security Requirements
+ Security Requirement 1
+ID: SCR1
+TAG: Communication Security
+GIST: Security of the communication between the system and server.
+SCALE: The messages should be encrypted for log-in communications, so others cannot get user-name and password from those messages.
+METER: Attempts to get user-name and password through obtained messages on 1000 log-in session during testing.
+MUST: 100% of the Communication Messages in the communication of a log-in session should be encrypted.
+
+ Security Requirement 2
+ID: SCF2
+TAG: User Create Account Security
+GIST: The security of creating account for users of the system.
+SCALE: If a user wants to create an account and the desired username is occupied, the user should be asked to choose a different user name.
+METER: Measurements obtained on 1000 hours of usage during testing.
+MUST: 100% of the time.
+ 
+ 
+ 
+ 
+ 
+5.4 Software Quality Attributes
+1.Reliability: Reliability of overall project depends on various components of the system.The     main pillar of reliability is the backup of user details made in database. Also the data is to be highly encrypted for the safety of the polling system.
+
+2.Availability: The web portal is available to user as long as it is connected to internet. A healthy internet connection having a good speed is to be used to get a better response time.
+
+3.Supportability: The system supports any upgradation of operating system on the computer
+
+4.Maintainability: In case of system failure the users logged in will not lose any of their data  after system recovers they will be logged in and continue receiving assessment till  they log out.
+
+5.5 Business Rules
+
+The owners can ask the developers to modify or update the portal as per their current requirement.
+6. Other Requirements
+Primary Requirement - The Voter intending to vote must have valid ID. So anyone having verified documents can use this.
+
+APPENDIX A- Glossary
+Term
+Definition
+Author
+Person submitting an article to be reviewed. In case of multiple authors, this term refers to the principal author, with whom all communication is made.
+Database
+Collection of all the information monitored by this system.
+Editor
+Person who receives articles, sends articles for review, and makes final judgments for publications.
+Field
+A cell within a form.
+Reader
+Anyone visiting the site to read articles.
+Reviewer
+A person that examines an article and has the ability to recommend approval of the article for publication or to request that changes be made in the article.
+Software Requirements Specification
+A document that completely describes all of the functions of a proposed system and the constraints under which it must operate. For example, this document.
+Stakeholder
+Any person with an interest in the project who is not a developer.
+User/Voter
+Someone who interacts with the mobile phone application
+
+Admin/Administrator
+System administrator who is given specific permission for managing and controlling the system.
+Environment
+It refers to the combination of hardware and software in a computer
+
+Appendix B: Analysis Model
+
+
+
+
+
+USE CASE DIAGRAM
+
+
+Appendix C: 
+ 
+[1] https://www.slideshare.net/nitinbhasin3/online-voting-system-project-file
+[2] http://nevonprojects.com/online-election-system-project/
+ 
+ 
+
+
+
+
